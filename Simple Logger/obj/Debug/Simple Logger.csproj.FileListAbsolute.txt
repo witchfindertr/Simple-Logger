@@ -1,0 +1,7 @@
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\Simple Logger.exe.config
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\Simple Logger.exe
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\Simple Logger.pdb
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\obj\Debug\Simple Logger.csprojResolveAssemblyReference.cache
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\obj\Debug\Simple Logger.csproj.CoreCompileInputs.cache
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\obj\Debug\Simple Logger.exe
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\obj\Debug\Simple Logger.pdb
