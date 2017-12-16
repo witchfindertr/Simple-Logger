@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Logger", "Simple Logger\Simple Logger.csproj", "{3ACFFC83-1747-41A0-9E60-98983B7D975C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Logger", "Simple Logger\Simple Logger.csproj", "{D376D53E-D631-4F1F-9B38-8EA5C7F5BF0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3ACFFC83-1747-41A0-9E60-98983B7D975C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3ACFFC83-1747-41A0-9E60-98983B7D975C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3ACFFC83-1747-41A0-9E60-98983B7D975C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3ACFFC83-1747-41A0-9E60-98983B7D975C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D376D53E-D631-4F1F-9B38-8EA5C7F5BF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D376D53E-D631-4F1F-9B38-8EA5C7F5BF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D376D53E-D631-4F1F-9B38-8EA5C7F5BF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D376D53E-D631-4F1F-9B38-8EA5C7F5BF0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D71A39ED-8A14-4A4D-B31C-87EC95C78ED5}
+		SolutionGuid = {35D605BE-7675-4300-8FAC-2AE0A0005245}
 	EndGlobalSection
 EndGlobal

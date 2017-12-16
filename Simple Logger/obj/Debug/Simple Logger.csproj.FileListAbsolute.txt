@@ -1,7 +1,17 @@
-C:\Users\Josh\Dropbox\Projects\Keylogger\Simple Logger\Simple Logger\bin\Debug\Simple Logger.exe.config
-C:\Users\Josh\Dropbox\Projects\Keylogger\Simple Logger\Simple Logger\bin\Debug\Simple Logger.exe
-C:\Users\Josh\Dropbox\Projects\Keylogger\Simple Logger\Simple Logger\bin\Debug\Simple Logger.pdb
-C:\Users\Josh\Dropbox\Projects\Keylogger\Simple Logger\Simple Logger\obj\Debug\Simple Logger.csprojResolveAssemblyReference.cache
-C:\Users\Josh\Dropbox\Projects\Keylogger\Simple Logger\Simple Logger\obj\Debug\Simple Logger.csproj.CoreCompileInputs.cache
-C:\Users\Josh\Dropbox\Projects\Keylogger\Simple Logger\Simple Logger\obj\Debug\Simple Logger.exe
-C:\Users\Josh\Dropbox\Projects\Keylogger\Simple Logger\Simple Logger\obj\Debug\Simple Logger.pdb
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\Simple Logger.exe.config
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\Simple Logger.exe
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\Simple Logger.pdb
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\obj\Debug\Simple Logger.csprojResolveAssemblyReference.cache
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\obj\Debug\Simple Logger.csproj.CoreCompileInputs.cache
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\obj\Debug\Simple Logger.exe
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\obj\Debug\Simple Logger.pdb
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.Core.dll
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.Windows.Threading.dll
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.Core.xml
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Josh\Dropbox\Projects\Simple Logger\Simple Logger\bin\Debug\System.Reactive.Windows.Threading.xml

