@@ -19,4 +19,4 @@ You have two options
 * Compile it  (Change debug to release)
 * Run the Simple Logger.exe file it creates in the release directory (Simple-Logger\Simple Logger\bin\Release)
 
-#### Please note I do not condone you using Simple Logger for anything that may be considered illegal.
+#### Please note I do not condone you using Simple Logger for anything that may be considered or is illegal.
