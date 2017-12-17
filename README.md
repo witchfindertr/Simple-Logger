@@ -12,7 +12,7 @@ You have two options here
 ## How do I use the inbuilt email function?
 * Allow your email account to access "less secure apps" in other words allow it to send emails from an SMTP library - https://www.google.com/settings/security/lesssecureapps
 * Open Email.cs and put in your email login and password
-* Recompile the project and your good to go
+* Recompile the project
 
 ## How do I use this?
 * Open the project solution in Visual Studio 2017
