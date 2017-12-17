@@ -17,4 +17,4 @@ You have two options here, manually recover the saved files from the computer it
 * Compile it  (Change debug to release)
 * Run the .exe file it creates in the release directory
 
-### Please not this was not made for you to conduct illegal activity and I do not condone you using this for anything that may be considered illegal.
+#### Please not this was not made for you to conduct illegal activity and I do not condone you using this for anything that may be considered illegal.
