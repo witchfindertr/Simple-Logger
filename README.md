@@ -17,6 +17,6 @@ You have two options here
 ## How do I use this?
 * Open the project solution in Visual Studio 2017
 * Compile it  (Change debug to release)
-* Run the .exe file it creates in the release directory
+* Run the Simple Logger.exe file it creates in the release directory (Simple-Logger\Simple Logger\bin\Release)
 
 #### Please not I do not condone you using this for anything that may be considered illegal.
