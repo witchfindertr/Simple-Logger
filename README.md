@@ -14,7 +14,7 @@ You have two options
 * Open Email.cs and put in your email login and password
 * Recompile the project
 
-## How do I use this?
+## How do I use Simple Logger?
 * Open the project solution in Visual Studio 2017
 * Compile it  (Change debug to release)
 * Run the Simple Logger.exe file it creates in the release directory (Simple-Logger\Simple Logger\bin\Release)
