@@ -4,7 +4,7 @@ A simple key logger written in C# that utilizes low level keyboard hooking to ca
 ## How does it work?
 When a session is launched, a global hook is installed on the computer using the Windows API (specifically user32.dll). This allows keystrokes to be captured regardless of what the user is doing. These keystrokes are then processed and converted from virtual key codes to readable characters. Once this has been accomplished, keystrokes are then written to a randomly generated file found in the directory "C:\ProgramData\Log Data".
 
-## How do I receive the recorded keystrokes?
+## How do I recover the recorded keystrokes?
 You have two options
 * Manually recover the saved files from the computer itself 
 * Utilize the inbuilt emailing function to email yourself the recorded keystrokes once a day.
