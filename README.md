@@ -12,7 +12,6 @@ You have two options
 ## How do I use the inbuilt email function?
 * Allow your email account to access "less secure apps" in other words allow it to send emails using an SMTP library - https://www.google.com/settings/security/lesssecureapps (if you are using a gmail account)
 * Open App.config and change the value of "email" to your email address and the value of "password" to your email password
-* Recompile the project
 
 ## How do I use Simple Logger?
 * Open the project solution in Visual Studio 2017
