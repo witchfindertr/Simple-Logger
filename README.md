@@ -7,7 +7,7 @@ When a session is launched, a global hook is installed on the computer using the
 ## How do I recover the recorded keystrokes?
 You have two options
 * Manually recover the saved files from the computer itself 
-* Recover the keystrokes via email.
+* Recover the keystrokes via email
 
 ## How do I recover the keystrokes via email?
 * If you are using gmail allow your account to access "less secure apps" in other words allow emails to be sent using an SMTP library - https://www.google.com/settings/security/lesssecureapps
