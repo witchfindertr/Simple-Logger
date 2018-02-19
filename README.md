@@ -15,7 +15,7 @@ You have two options
 * Change the value of "email" to your email address and the value of "password" to your email password in App.config
 
 ## How do I use Simple Logger?
-* Compile the project  (Change debug to release)
+* Compile the project (Change debug to release)
 * Run the Simple Logger.exe file it creates in the release directory (Simple-Logger\Simple Logger\bin\Release)
 
 #### Please note I do not condone you using Simple Logger for anything that may be considered illegal.
