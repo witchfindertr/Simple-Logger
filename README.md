@@ -1,5 +1,5 @@
 # Simple Logger
-A simple key logger written in C# that utilizes low level keyboard hooking to capture key strokes
+A simple key logger written in C# that utilizes low level keyboard hooking to capture key strokes made for educational purposes
 
 ## How does it work?
 When a session is launched, a global hook is installed on the computer using the Windows API (specifically user32.dll). This allows keystrokes to be captured regardless of what the user is doing. These keystrokes are then processed and converted from virtual key codes to readable characters. Once this has been accomplished, keystrokes are then written to a randomly generated file found in the directory "C:\ProgramData\Log Data".
