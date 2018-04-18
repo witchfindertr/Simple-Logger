@@ -10,7 +10,7 @@ You have two options
 * Recover the keystrokes via email
 
 ### How do I recover the keystrokes via email?
-* If you are using gmail allow your account to access "less secure apps" in other words allow emails to be sent using an SMTP library - https://www.google.com/settings/security/lesssecureapps
+* If you are using Gmail allow your account to access "less secure apps" in other words allow emails to be sent using an SMTP library - https://www.google.com/settings/security/lesssecureapps
 * Change the value of "service" to the SMTP server associated with your email address in App.config
 * Change the value of "email" to your email address and the value of "password" to your email password in App.config
 
