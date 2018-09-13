@@ -1,5 +1,5 @@
 # Simple Logger
-A simple key logger written in C# that utilizes low level keyboard hooking to capture key strokes
+A key logger written in C# that utilizes low level keyboard hooking to capture key strokes.
 
 ### How does it work?
 * When a session is launched, a global hook is installed on the computer using the Windows API (specifically user32.dll.) 
